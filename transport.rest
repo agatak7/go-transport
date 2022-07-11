@@ -1,0 +1,28 @@
+GET http://localhost:6000/transports
+
+
+### Create new transport
+POST http://localhost:6000/transport
+Content-Type: application/json
+
+{
+    "name": "Road Transport",
+    "description": "Transport by road",
+    "modality": "Road"
+}
+
+### Update transport by ID
+PUT http://localhost:6000/transport/62cbe8d9e436c6799332b200
+Content-Type: application/json
+
+{
+    "name": "Air Transport",
+    "description": "Transport by air",
+    "modality": "Air"
+}
+
+### Query for transport by ID
+GET http://localhost:6000/transport/62cbe8c9e436c6799332b1ff
+
+### Delete transport
+DELETE http://localhost:6000/transport/62cbe8d9e436c6799332b200
